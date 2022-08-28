@@ -1,0 +1,96 @@
+#blog {
+    @include mgap(0px, 0px, 140px, 140px);
+
+    .blog-header {
+        position: relative;
+        @include mgap(0px, 0px, 0px, 90px);
+
+        h3 {
+            @include font('Poppins', 54px, 500, $secondaryparacolor);
+            @include mgap(0px, 0px, 0px, 40px);
+        }
+
+        p {
+            @include font('roboto', 20px, 400, $paracolor);
+            line-height: 28px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: 225px;
+            right: -450px;
+            width: 2px;
+            height: 467px;
+            background-color: #cbcbcb;
+            z-index: 999;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: 347px;
+            right: -450px;
+            width: 9px;
+            height: 200px;
+            background-color: $primarybg;
+            z-index: 999;
+        }
+    }
+
+    .blog-item {
+        background: url(../images/blog.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include pgap(109px, 107px, 332px, 59px);
+        border-radius: 20px;
+
+        h4 {
+            @include font('Source Sans Pro', 27px, 700, $normalcolor);
+            @include mgap(0px, 0px, 0px, 22px);
+
+        }
+
+        p {
+            @include font('Source Sans Pro', 16px, 400, $normalcolor);
+        }
+
+    }
+
+    .blog-item2 {
+
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/blog2.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        @include pgap(108px, 108px, 234px, 88px);
+        border-radius: 20px;
+
+        h4 {
+            @include font('Source Sans Pro', 27px, 700, $normalcolor);
+            @include mgap(0px, 0px, 0px, 22px);
+
+        }
+
+        p {
+            @include font('Source Sans Pro', 16px, 400, $normalcolor);
+        }
+
+        .extra-item {
+            @include mgap(0px, 0px, 60px, 0px);
+
+            a {
+                @include font('Poppins', 17px, 400, $commentparacolor);
+                @include pgap(56px, 56px, 22px, 22px);
+                border-radius: (40px 5px);
+                border: 1px solid $normalcolor;
+            }
+        }
+    }
+
+    .b {
+        @include mgap(12px, 12px, 0px, 0px)
+    }
+
+}

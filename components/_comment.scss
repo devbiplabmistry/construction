@@ -1,0 +1,41 @@
+#comment {
+    @include mgap(0px, 0px, 173px, 170px);
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url(../images/comment.jpg);
+    @include pgap(200px, 200px, 215px, 350px);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    .comment-content {
+        position: relative;
+
+        h2 {
+            @include font('Poppins', 54px, 500, $commentparacolor);
+            @include mgap(0px, 0px, 0px, 65px)
+        }
+
+        p {
+            @include font('Poppins', 18px, 400, $commentparacolor);
+            line-height: 28px;
+            padding: (0 96px);
+        }
+
+        .c {
+            @include mgap(0px, 0px, 0px, 60px)
+        }
+
+        .comment-icon {
+            .left-icon {
+                position: absolute;
+                top: 45px;
+                left: 30px;
+            }
+
+            .right-icon {
+                position: absolute;
+                bottom: -50px;
+                right: 15px;
+            }
+        }
+    }
+}

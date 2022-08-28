@@ -1,0 +1,98 @@
+#about {
+    padding-bottom: 175px;
+    @include mgap(0px, 0px, 178px, 0px);
+
+    .about-top-wrapper {
+        @include pgap(76px, 76px, 60px, 60px);
+        background-color: $secondarybg;
+        margin-top: 45px;
+        
+        .about-top-item {
+            @include mgap(0px, 100px, 0px, 0px);
+
+            span {
+                @include font('Poppins', 20px, 400, $headincolor);
+            }
+
+            &:last-child {
+                @include mgap(0px, 0px, 0px, 0px);
+            }
+        }
+
+        border-radius: 150px;
+    }
+
+    .about-header-left {
+        @include mgap(0px, 0px, 130px, 0px);
+        p {
+            @include font('Poppins', 18px, 400, $paracolor);
+            @include mgap(0px, 0px, 0px, 62px);
+            line-height: 28px;
+            @include pgap(0px, 10px, 0px, 0px);
+        }
+
+        a {
+            @include font('Poppins', 17px, 500, $normalcolor);
+            @include pgap(78px, 78px, 22px, 22px);
+            background-color: $primarybg;
+            border-radius: 40px 5px;
+            transition: all linear .3s;
+            &:hover{
+                box-shadow: 0px 64.8148px 46.8519px rgba(24, 167, 185, 0.0759259), 0px 38.5185px 25.4815px rgba(24, 167, 185, 0.0607407), 0px 20px 13px rgba(24, 167, 185, 0.05), 0px 8.14815px 6.51852px rgba(24, 167, 185, 0.0392593), 0px 1.85185px 3.14815px rgba(24, 167, 185, 0.0240741);
+                ;
+            }
+        }
+    }
+
+    .about-header-right {
+        @include mgap(0px, 0px, 130px, 0px);
+
+        h3 {
+            @include font('Poppins', 54px, 500, $secondaryparacolor);
+            line-height: 65px;
+        }
+    }
+
+    .about-bottom-left {
+        margin-top: 100px;
+
+        img {
+            border-radius: 10px 292px 10px 10px;
+        }
+    }
+
+    .about-bottom-right {
+        @include mgap(24px, 0px, 300px, 0px);
+
+        .about-bottom-item {
+            margin-top: 105px;
+            position: relative;
+            z-index: 1;
+
+            .left {
+                h4 {
+                    @include font('Poppins', 72px, 600, $secondaryparacolor);
+                }
+            }
+
+            .right {
+                text-align: start;
+
+                p {
+                    @include font('Poppins', 18px, 400, $paracolor);
+                    line-height: 28px;
+                    padding: 0 36px;
+                }
+            }
+        }
+
+        .leaf {
+            .b {
+                position: absolute;
+                top: 25px;
+                left: -28px;
+                z-index: -1;
+            }
+        }
+    }
+}

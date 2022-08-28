@@ -1,0 +1,77 @@
+#contact {
+    .contact-header {
+        position: relative;
+
+        h3 {
+            @include font('Poppins', 54px, 500, $secondaryparacolor);
+            @include mgap(0px, 0px, 0px, 30px)
+        }
+
+        p {
+            @include font('roboto', 20px, 400, $paracolor);
+            line-height: 28px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -45px;
+            left: -524px;
+            width: 8px;
+            height: 200px;
+            background-color: $primarybg;
+            z-index: 999;
+        }
+
+        &:before {
+            content: '';
+            position: absolute;
+            top: -45px;
+            left: -435px;
+            width: 8px;
+            height: 200px;
+            background-color: $primarybg;
+            z-index: 999;
+        }
+    }
+
+    .left-contact {
+        @include mgap(0px, 0px, 80px, 0px);
+
+        .form-item {
+            margin-top: 20px;
+            width: 100%;
+
+            input {
+                @include font('Poppins', 18px, 400, $paracolor);
+                background-color: $formbg;
+                border: none;
+
+                @include pgap(24px, 0px, 20px, 17px)
+            }
+
+            .f {
+                background-color: $normalcolor;
+                border: 1px solid $formbg;
+            }
+
+            .d {
+                @include pgap(24px, 0px, 20px, 155px);
+                @include mgap(0px, 0px, 30px, 60px)
+            }
+        }
+
+        a {
+            @include pgap(48px, 69px, 23px, 23px);
+            background-color: $primarybg;
+            border-radius: 40px 5px;
+            @include font('Poppins', 17px, 400, $secondarybg);
+
+
+        }
+    }
+
+    .right-contact {
+        margin-top: 107px;
+    }
+}

@@ -1,0 +1,19 @@
+#copyright {
+    .copyright-content {
+        position: relative;
+
+        h5 {
+            @include font('Poppins', 14px, 500, #c2c2c2);
+        }
+
+        &:after {
+            position: absolute;
+            content: '';
+            width: 1170px;
+            height: 1px;
+            background-color: #F4F4F4;
+            top: -50px;
+            left: -450px;
+        }
+    }
+}

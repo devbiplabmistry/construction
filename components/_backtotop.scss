@@ -1,0 +1,57 @@
+#backto-top {
+    .back-to-top {
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        background-color: red;
+        position: fixed;
+        right: 15px;
+        bottom: 15px;
+        text-align: center;
+        line-height: 30px;
+
+        i {
+            color: #fff;
+            font-size: 20px;
+        }
+
+        animation:top 1s;
+    }
+}
+
+
+@keyframes top {
+    0% {
+        top: 0;
+    }
+
+    30% {
+        top: 400px;
+    }
+
+    40% {
+        top: 400px;
+    }
+
+    50% {
+        top: 500px;
+    }
+
+    75% {
+        top: 600px;
+    }
+
+    100% {
+        top: 750px;
+    }
+}
+
+::selection {
+    background-color: red;
+    color: #fff;
+}
+
+html,
+body {
+    animation: unset !important;
+}

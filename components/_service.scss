@@ -1,0 +1,140 @@
+#service {
+    .service-header {
+        position: relative;
+
+        h3 {
+            @include font('Poppins', 54px, 500, $secondaryparacolor);
+            text-transform: capitalize;
+            @include mgap(0px, 0px, 0px, 40px);
+        }
+
+        p {
+            @include font('Poppins', 20px, 400, $paracolor);
+            text-transform: capitalize;
+            line-height: 28px;
+        }
+
+        &:after {
+            content: '';
+            position: absolute;
+            top: -45px;
+            right: -470px;
+            width: 8px;
+            height: 200px;
+            background-color: $primarybg;
+            z-index: 999;
+        }
+    }
+
+    .service-wrapper {
+        @include mgap(12px, 12px, 80px, 95px);
+
+        .service-item {
+            position: relative;
+            box-shadow: 0px 20px 50px rgba(198, 217, 225, 0.3);
+            border-radius: 5px;
+            @include pgap(120px, 120px, 70px, 60px);
+
+            .service-img {
+                width: 120px;
+                height: 120px;
+                border-radius: 50%;
+                margin: 0 auto;
+            }
+
+            .service-content {
+                h5 {
+                    @include font('Poppins', 24px, 500, $secondaryparacolor);
+                    @include mgap(0px, 0px, 25px, 0px);
+                }
+
+                span {
+                    @include font('Poppins', 12px, 500, $paracolor);
+                    @include mgap(0px, 0px, 25px, 0px);
+                }
+
+                h4 {
+                    @include font('Poppins', 18px, 500, $secondaryparacolor);
+                    @include mgap(0px, 0px, 55px, 8px);
+                }
+
+                a {
+                    @include font('Poppins', 17px, 500, $headincolor);
+                }
+
+            }
+
+            .star {
+                position: absolute;
+                top: 30px;
+                left: 30px;
+            }
+
+            .dot {
+                position: absolute;
+                top: 30px;
+                right: 30px;
+            }
+        }
+    }
+
+    .service-bottom {
+        position: relative;
+        width: 120px;
+        height: 66px;
+        background-color: $normalcolor;
+        border-radius: 53px;
+
+        .left {
+            font-size: 20px;
+            position: absolute;
+            top: 08px;
+            left: 08px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            line-height: 50px;
+            background-color: $normalcolor;
+            transition: all linear .3s;
+
+            &:hover {
+                background-color: $primarybg;
+                color: $normalcolor;
+            }
+        }
+
+        .right {
+            font-size: 20px;
+            position: absolute;
+            top: 08px;
+            right: 08px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: $normalcolor;
+            line-height: 50px;
+            transition: all linear .3s;
+
+            &:hover {
+                background-color: $primarybg;
+                color: $normalcolor;
+            }
+        }
+    }
+
+    .service-slider {
+        .s-wrapper {
+            &.slick-center {
+                .service-item {
+                    transform: scale(1.1);
+                }
+
+            }
+        }
+
+        .slick-list {
+            padding-top: 30px;
+            padding-bottom: 30px;
+        }
+    }
+}

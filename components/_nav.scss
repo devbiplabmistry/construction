@@ -1,0 +1,37 @@
+.navbar {
+    .navbar-brand {
+        @include font('Poppins', 25px, 600, $primarybg);
+        text-transform: uppercase;
+    }
+
+    .nav-item {
+        .nav-link {
+            @include font('Poppins', 18px, 600, $secondaryparacolor);
+            @include pgap(0px, 0px, 0px, 0px);
+            text-transform: capitalize;
+        }
+        @include mgap(0px, 35px, 0px, 0px);
+        &:last-child {
+            @include mgap(0px, 0px, 0px, 0px);
+        }
+    }
+}
+
+.sticky-navbar {
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    animation: sticky 1s;
+    background-color: blue;
+}
+
+@keyframes sticky {
+    from {
+        top: -100px;
+    }
+
+    to {
+        top: 0;
+    }
+}
